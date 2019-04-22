@@ -1,48 +1,29 @@
 <template>
   <div>
-    <app-header :title="title"></app-header>
-    <app-nijas :ninjas="ninjas"></app-nijas>
-    <app-footer :copyright="copyright" :title="title"></app-footer>
+    <keep-alive>
+      <component :is="component"></component>
+    </keep-alive>
+    <button @click="component='form-one'">Form One</button>
+    <button @click="component='form-two'">Form Two</button>
   </div>
 </template>
 
 <script>
-import Header from "./components/Header.vue";
-import Footer from "./components/Footer.vue";
-import Ninjas from "./components/Ninjas.vue";
+import formOne from "./components/formOne.vue";
+import formTwo from "./components/formTwo.vue";
 export default {
   components: {
-    "app-header": Header,
-    "app-footer": Footer,
-    "app-nijas": Ninjas
+    "form-one": formOne,
+    "form-two": formTwo
   },
   data() {
     return {
-      title: "VUE Ninjas",
-      ninjas: [
-        { name: "Ryu", speciality: "Kungfu", show: false },
-        { name: "Karin", speciality: "Kyojutusu", show: false },
-        { name: "Rock Lee", speciality: "Taijutusu", show: false },
-        { name: "Naruto", speciality: "Ninjutsu", show: false },
-        { name: "Sasuke", speciality: "Genjutsu", show: false },
-        { name: "Itachi", speciality: "Genjutsu", show: false }
-      ],
-      copyright: "Copyright 2019"
+      component: "form-one"
     };
   },
-  methods: {
-    greeting: function() {
-      return "hey wooop";
-    },
-    updateTitle: function(title) {
-      this.title = title;
-    }
-  }
+  methods: {}
 };
 </script>
 
 <style scoped>
-h1 {
-  color: purple;
-}
 </style>

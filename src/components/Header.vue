@@ -6,10 +6,13 @@
 
 <script>
 export default {
+  props: {
+    title: {
+      type: String
+    }
+  },
   data() {
-    return {
-      title: "Vue Ninjas"
-    };
+    return {};
   }
 };
 </script>

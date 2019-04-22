@@ -11,17 +11,9 @@
 
 <script>
 export default {
+  props: ["ninjas"],
   data() {
-    return {
-      ninjas: [
-        { name: "Ryu", speciality: "Kungfu", show: false },
-        { name: "Karin", speciality: "Kyojutusu", show: false },
-        { name: "Rock Lee", speciality: "Taijutusu", show: false },
-        { name: "Naruto", speciality: "Ninjutsu", show: false },
-        { name: "Sasuke", speciality: "Genjutsu", show: false },
-        { name: "Itachi", speciality: "Genjutsu", show: false }
-      ]
-    };
+    return {};
   }
 };
 </script>

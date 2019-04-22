@@ -1,8 +1,8 @@
 <template>
   <div>
-    <app-header></app-header>
-    <app-nijas></app-nijas>
-    <app-footer></app-footer>
+    <app-header :title="title"></app-header>
+    <app-nijas :ninjas="ninjas"></app-nijas>
+    <app-footer :copyright="copyright" :title="title"></app-footer>
   </div>
 </template>
 
@@ -18,7 +18,16 @@ export default {
   },
   data() {
     return {
-      title: "Aplikasi dengan file vue pertama saya"
+      title: "VUE Ninjas",
+      ninjas: [
+        { name: "Ryu", speciality: "Kungfu", show: false },
+        { name: "Karin", speciality: "Kyojutusu", show: false },
+        { name: "Rock Lee", speciality: "Taijutusu", show: false },
+        { name: "Naruto", speciality: "Ninjutsu", show: false },
+        { name: "Sasuke", speciality: "Genjutsu", show: false },
+        { name: "Itachi", speciality: "Genjutsu", show: false }
+      ],
+      copyright: "Copyright 2019"
     };
   },
   methods: {

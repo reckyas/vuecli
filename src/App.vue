@@ -33,6 +33,9 @@ export default {
   methods: {
     greeting: function() {
       return "hey wooop";
+    },
+    updateTitle: function(title) {
+      this.title = title;
     }
   }
 };
